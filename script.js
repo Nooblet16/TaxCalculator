@@ -5,7 +5,7 @@ function calculateTax() {
     const personalAllowance = 12570;
     const taxRate = 0.20;
     const class1NI = 0.12; // For PAYE Income
-    const class2NI = 179.40; // For Self-Employment
+    const class2NI = 179.40; // For Self-Employment (fixed rate)
     const class4NI = 0.09; // For Self-Employment
 
     // Calculate self-employment profits
@@ -25,13 +25,22 @@ function calculateTax() {
     // Calculations for Self-Employment
     const incomeTaxSelfEmployment = taxRate * taxableSelfEmployment;
     const niSelfEmploymentClass2 = (selfEmploymentProfits > personalAllowance) ? class2NI : 0;
-    const niSelfEmploymentClass4 = class4NI * Math.max(0, selfEmploymentProfits - personalAllowance);
+
+    // Class 4 NI calculation
+    let niSelfEmploymentClass4 = 0;
+
+    if (selfEmploymentProfits > 50270) {
+        niSelfEmploymentClass4 += 0.02 * (selfEmploymentProfits - 50270); // 2% on profits over £50,270
+        niSelfEmploymentClass4 += 0.09 * (50270 - 12570); // 9% on profits between £12,570 and £50,270
+    } else if (selfEmploymentProfits > 12570) {
+        niSelfEmploymentClass4 += 0.09 * (selfEmploymentProfits - 12570); // 9% on profits between £12,570 and £50,270
+    }
 
     // Totals
     const totalIncomeTax = incomeTaxPAYE + incomeTaxSelfEmployment;
     const totalNI = niPAYE + niSelfEmploymentClass2 + niSelfEmploymentClass4;
     const totalTax = totalIncomeTax + totalNI;
-    
+
     // Calculate Total Self-Employed Tax
     const totalSelfEmployedTax = incomeTaxSelfEmployment + niSelfEmploymentClass2 + niSelfEmploymentClass4;
 
