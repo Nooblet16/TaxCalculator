@@ -32,6 +32,8 @@ body {
     margin-bottom: -5px; /* Space between emojis and the header */
 }
 
+
+
 /* Header styling */
 h1 {
     font-size: 22px;  /* Adjusted for mobile and desktop */
@@ -129,4 +131,11 @@ strong {
 
 .total-section strong {
     font-size: 18px;
+}
+
+
+/* Emoji styling */
+.emoji {
+    font-size: 1.2em; /* Adjust size as needed */
+    vertical-align: middle; /* Align with text */
 }
