@@ -31,6 +31,9 @@ function calculateTax() {
     const totalIncomeTax = incomeTaxPAYE + incomeTaxSelfEmployment;
     const totalNI = niPAYE + niSelfEmploymentClass2 + niSelfEmploymentClass4;
     const totalTax = totalIncomeTax + totalNI;
+    
+    // Calculate Total Self-Employed Tax
+    const totalSelfEmployedTax = incomeTaxSelfEmployment + niSelfEmploymentClass2 + niSelfEmploymentClass4;
 
     // Breakdown of results
     const breakdown = `
@@ -43,7 +46,7 @@ function calculateTax() {
             <div>
                 <strong>Self-Employment Income Breakdown:</strong><br>
                 Self-Employment Income: £${selfEmploymentIncome.toFixed(2)}<br>
-                Total Expenses: £${totalExpenses.toFixed(2)}
+                Total Expenses: £${totalExpenses.toFixed(2)}<br>
                 <div class="self-employment-profit">Self-Employment Profits: £${selfEmploymentProfits.toFixed(2)}</div>
                 Income Tax (Self-Employment): £${incomeTaxSelfEmployment.toFixed(2)}<br>
                 Class 2 NI (Self-Employment): £${niSelfEmploymentClass2.toFixed(2)}<br>
@@ -54,9 +57,7 @@ function calculateTax() {
         <div class="total-section">
             <strong>Total Income Tax: £${totalIncomeTax.toFixed(2)}</strong><br>
             <strong>Total NI: £${totalNI.toFixed(2)}</strong><br><br>
-            <strong><u>TOTAL Tax and NI: £${totalTax.toFixed(2)}</u></strong>
+            <strong><u>TOTAL Tax and NI: £${totalTax.toFixed(2)}</u></strong><br>
+            <strong>Total Self-Employed Tax: £${totalSelfEmployedTax.toFixed(2)}</strong>
         </div>
     `;
-
-    document.getElementById("result").innerHTML = breakdown;
-}
