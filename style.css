@@ -1,4 +1,4 @@
-/* General styling */
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
@@ -11,50 +11,33 @@ body {
     min-height: 100vh;
 }
 
-/* Container styling */
+/* Center the container */
 .container {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    width: 100%;
-    max-width: 600px; /* Limits max width for readability on larger screens */
+    max-width: 600px;
+    width: calc(100% - 40px); /* Ensures container has 20px margin on both sides */
     text-align: center;
-    margin: 0 10px; /* Adds margin on sides for small screens */
+    margin: 20px; /* Ensure margin around the container */
 }
 
-/* Header styling */
+/* Make the heading responsive */
 h1 {
-    font-size: 22px;
+    font-size: 24px;
     color: #0073e6;
     margin-bottom: 20px;
-    white-space: nowrap; /* Prevents breaking text into multiple lines */
 }
 
-h1::before {
-    content: "😊🦄 "; /* Emojis with spacing */
-}
-
-h1::after {
-    content: " 🦄😊"; /* Emojis with spacing */
-}
-
-/* Label styling */
-label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
-    text-align: left;
-}
-
-/* Input field styling */
+/* Make input fields responsive */
 input {
-    width: calc(100% - 20px); /* Dynamic width to ensure padding and borders don’t overflow */
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px; /* Adjust font size */
 }
 
 /* Button styling */
@@ -67,80 +50,28 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 15px;
-    width: 100%;
 }
 
 button:hover {
     background-color: #005bb5;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Responsive font and container for smaller devices */
+@media (max-width: 600px) {
     h1 {
-        font-size: 20px; /* Slightly smaller font size for smaller devices */
+        font-size: 20px; /* Smaller font for small screens */
+    }
+
+    .container {
+        padding: 15px; /* Adjust padding for smaller screens */
+        max-width: calc(100% - 30px); /* Ensure margin of 15px on both sides */
+    }
+
+    input {
+        font-size: 14px; /* Smaller input text for smaller screens */
     }
 
     button {
-        font-size: 14px; /* Smaller font size for buttons */
-    }
-}
-
-/* Breakdown sections for results */
-.breakdown {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    margin-top: 20px;
-}
-
-.breakdown div {
-    width: 48%;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-}
-
-/* Styling for self-employment profit section */
-.self-employment-profit {
-    padding: 10px;
-    background-color: #e0f7fa;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #00796b;
-    margin-top: 15px;
-}
-
-/* Strong text styling */
-strong {
-    color: #333;
-}
-
-/* Total section styling */
-.total-section {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.total-section strong {
-    font-size: 18px;
-}
-
-/* Mobile-friendly adjustments */
-@media (max-width: 600px) {
-    .breakdown {
-        flex-direction: column;
-    }
-
-    .breakdown div {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    input, button {
-        font-size: 14px; /* Adjust input and button font size for smaller screens */
+        font-size: 14px; /* Adjust button size for smaller screens */
     }
 }
