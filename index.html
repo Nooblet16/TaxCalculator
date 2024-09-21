@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax and NI Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>😊 Tax and NI Calculator 2024-25 😊</h1>
+        
+        <label for="payeIncome">PAYE Income:</label>
+        <input type="number" id="payeIncome" placeholder="Enter your PAYE Income"><br>
+        
+        <label for="selfEmploymentIncome">Total Self-Employment Income:</label>
+        <input type="number" id="selfEmploymentIncome" placeholder="Enter your Self-Employment Income"><br>
+        
+        <label for="totalExpenses">Total Expenses:</label>
+        <input type="number" id="totalExpenses" placeholder="Enter your Total Expenses"><br>
+
+        <button onclick="calculateTax()">Calculate</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the JS file -->
+</body>
+</html>
