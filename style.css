@@ -11,37 +11,36 @@ body {
     min-height: 100vh;
 }
 
+/* Container styling */
 .container {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 100%;
     width: 100%;
+    max-width: 600px; /* Limits max width for readability on larger screens */
     text-align: center;
+    margin: 0 10px; /* Adds margin on sides for small screens */
 }
 
+/* Header styling */
 h1 {
-    font-size: 24px;
+    font-size: 22px;
     color: #0073e6;
     margin-bottom: 20px;
+    white-space: nowrap; /* Prevents breaking text into multiple lines */
 }
 
 h1::before {
-    content: "😊🦄"; 
-    margin-right: 10px;
+    content: "😊🦄 "; /* Emojis with spacing */
 }
 
 h1::after {
-    content: "🦄😊"; 
-    margin-left: 10px;
+    content: " 🦄😊"; /* Emojis with spacing */
 }
 
-.total-section strong u::after {
-    content: "🫠"; 
-    margin-left: 10px;
-}
-
+/* Label styling */
 label {
     font-weight: bold;
     margin-bottom: 10px;
@@ -49,14 +48,16 @@ label {
     text-align: left;
 }
 
+/* Input field styling */
 input {
-    width: 100%;
+    width: calc(100% - 20px); /* Dynamic width to ensure padding and borders don’t overflow */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+/* Button styling */
 button {
     background-color: #0073e6;
     color: white;
@@ -66,12 +67,25 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 15px;
+    width: 100%;
 }
 
 button:hover {
     background-color: #005bb5;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px; /* Slightly smaller font size for smaller devices */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}
+
+/* Breakdown sections for results */
 .breakdown {
     display: flex;
     justify-content: space-between;
@@ -87,6 +101,7 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Styling for self-employment profit section */
 .self-employment-profit {
     padding: 10px;
     background-color: #e0f7fa;
@@ -96,10 +111,12 @@ button:hover {
     margin-top: 15px;
 }
 
+/* Strong text styling */
 strong {
     color: #333;
 }
 
+/* Total section styling */
 .total-section {
     background-color: #f9f9f9;
     padding: 20px;
@@ -112,6 +129,7 @@ strong {
     font-size: 18px;
 }
 
+/* Mobile-friendly adjustments */
 @media (max-width: 600px) {
     .breakdown {
         flex-direction: column;
@@ -120,5 +138,9 @@ strong {
     .breakdown div {
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    input, button {
+        font-size: 14px; /* Adjust input and button font size for smaller screens */
     }
 }
