@@ -17,28 +17,29 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;   /* Ensure it does not overflow */
     width: 100%;
-    max-width: 500px;  /* Adjust max width for desktop */
+    max-width: 450px;  /* Limit the width on desktop */
     text-align: center;
-    margin: 10px;  /* Adds space around the container */
-    box-sizing: border-box;  /* Include padding and border in width */
+    margin: 10px; /* Ensure it is centered with some margin on small devices */
+    box-sizing: border-box;  /* Include padding and border in the element's width/height */
 }
 
 /* Header styling */
 h1 {
-    font-size: 24px;  /* Desktop-friendly font size */
+    font-size: 22px;  /* Adjusted for mobile and desktop */
     color: #0073e6;
     margin-bottom: 20px;
-    white-space: nowrap;  /* Prevent text from wrapping into multiple lines */
-    overflow-wrap: break-word;  /* Ensure emojis and text don’t spill */
+    white-space: nowrap;  /* Prevents breaking text into multiple lines */
+    overflow-wrap: break-word;  /* Ensure emojis and text don't spill over */
 }
 
 h1::before {
-    content: "😊🦄";  /* Emojis before text */
+    content: "ðŸ˜ŠðŸ¦„";  /* Emojis before text */
 }
 
 h1::after {
-    content: "🦄😊";  /* Emojis after text */
+    content: "ðŸ¦„ðŸ˜Š";  /* Emojis after text */
 }
 
 /* Label styling */
@@ -51,12 +52,12 @@ label {
 
 /* Input field styling */
 input {
-    width: 100%;  /* Take full width of container */
+    width: 100%;  /* Take full width of the container */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;  /* Ensure padding doesn't overflow container */
+    box-sizing: border-box;  /* Ensure padding doesn't overflow the container */
 }
 
 /* Button styling */
@@ -69,7 +70,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 15px;
-    width: 100%;  /* Ensure button spans across container */
+    width: 100%;  /* Ensure button spans across the container */
 }
 
 button:hover {
@@ -79,11 +80,11 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     h1 {
-        font-size: 20px;  /* Smaller font size for smaller devices */
+        font-size: 20px; /* Slightly smaller font size for smaller devices */
     }
 
     button {
-        font-size: 14px;  /* Smaller button font size for mobile */
+        font-size: 14px; /* Smaller font size for buttons */
     }
 }
 
@@ -103,7 +104,7 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Self-employment profit section */
+/* Styling for self-employment profit section */
 .self-employment-profit {
     padding: 10px;
     background-color: #e0f7fa;
@@ -115,49 +116,3 @@ button:hover {
 
 /* Strong text styling */
 strong {
-    color: #333;
-}
-
-/* Total section styling */
-.total-section {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.total-section strong {
-    font-size: 18px;
-}
-
-/* Desktop-friendly adjustments */
-@media (min-width: 1024px) {
-    .container {
-        max-width: 600px;  /* Increase container size on larger screens */
-    }
-
-    h1 {
-        font-size: 26px;  /* Larger font size for desktops */
-    }
-
-    button {
-        font-size: 18px;  /* Larger button font size for desktops */
-    }
-}
-
-/* Mobile-friendly adjustments */
-@media (max-width: 600px) {
-    .breakdown {
-        flex-direction: column;
-    }
-
-    .breakdown div {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    input, button {
-        font-size: 14px;  /* Adjust input and button font size for smaller screens */
-    }
-}
