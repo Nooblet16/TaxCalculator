@@ -61,3 +61,7 @@ function calculateTax() {
             <strong>Total Self-Employed Tax: £${totalSelfEmployedTax.toFixed(2)}</strong>
         </div>
     `;
+
+    // This line updates the HTML with the calculated results
+    document.getElementById("result").innerHTML = breakdown;
+}
