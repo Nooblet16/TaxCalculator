@@ -17,29 +17,27 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;   /* Ensure it does not overflow */
     width: 100%;
-    max-width: 450px;  /* Limit the width on desktop */
+    max-width: 500px;  /* Adjust max width */
     text-align: center;
-    margin: 10px; /* Ensure it is centered with some margin on small devices */
-    box-sizing: border-box;  /* Include padding and border in the element's width/height */
+    margin: 10px;
+    box-sizing: border-box;  /* Include padding and border in width */
+}
+
+/* Emoji header styling */
+.emoji-header {
+    font-size: 28px;  /* Larger size for emojis */
+    text-align: center;
+    margin-bottom: 10px;  /* Space between emojis and the header */
 }
 
 /* Header styling */
 h1 {
-    font-size: 22px;  /* Adjusted for mobile and desktop */
+    font-size: 22px;  /* Standard font size for desktop and mobile */
     color: #0073e6;
     margin-bottom: 20px;
-    white-space: nowrap;  /* Prevents breaking text into multiple lines */
-    overflow-wrap: break-word;  /* Ensure emojis and text don't spill over */
-}
-
-h1::before {
-    content: "ðŸ˜ŠðŸ¦„";  /* Emojis before text */
-}
-
-h1::after {
-    content: "ðŸ¦„ðŸ˜Š";  /* Emojis after text */
+    white-space: nowrap;  /* Prevents breaking text */
+    overflow-wrap: break-word;  /* Ensure text doesn’t spill over */
 }
 
 /* Label styling */
@@ -52,12 +50,12 @@ label {
 
 /* Input field styling */
 input {
-    width: 100%;  /* Take full width of the container */
+    width: 100%;  /* Take full width of container */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;  /* Ensure padding doesn't overflow the container */
+    box-sizing: border-box;
 }
 
 /* Button styling */
@@ -80,11 +78,11 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     h1 {
-        font-size: 20px; /* Slightly smaller font size for smaller devices */
+        font-size: 20px;  /* Slightly smaller font size for smaller devices */
     }
 
     button {
-        font-size: 14px; /* Smaller font size for buttons */
+        font-size: 14px;
     }
 }
 
@@ -104,7 +102,7 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Styling for self-employment profit section */
+/* Self-employment profit section */
 .self-employment-profit {
     padding: 10px;
     background-color: #e0f7fa;
@@ -116,3 +114,49 @@ button:hover {
 
 /* Strong text styling */
 strong {
+    color: #333;
+}
+
+/* Total section styling */
+.total-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.total-section strong {
+    font-size: 18px;
+}
+
+/* Desktop-friendly adjustments */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    .breakdown {
+        flex-direction: column;
+    }
+
+    .breakdown div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
