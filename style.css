@@ -114,7 +114,7 @@ button:hover {
     font-weight: bold;
     color: #00796b;
     margin-top: 15px;
-    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    /* Remove white-space: nowrap; to allow text to wrap */
 }
 
 
