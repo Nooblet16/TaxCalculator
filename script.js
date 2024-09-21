@@ -67,7 +67,7 @@ function calculateTax() {
             <strong>Total Income Tax: £${totalIncomeTax.toFixed(2)}</strong><br>
             <strong>Total NI: £${totalNI.toFixed(2)}</strong><br><br>
             <strong><u>TOTAL Tax and NI: £${totalTax.toFixed(2)}</u></strong><br><br>
-            <strong>Total Self-Employed Tax: £${totalSelfEmployedTax.toFixed(2)} 🫠</strong>
+            <strong>Total Self-Employed Tax: £${totalSelfEmployedTax.toFixed(2)} <span class="emoji">🫠</span></strong>
 
         </div>
     `;
