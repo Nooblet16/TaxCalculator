@@ -107,13 +107,16 @@ button:hover {
 
 /* Styling for self-employment profit section */
 .self-employment-profit {
+    display: inline-block; /* Allows the box to resize based on content */
     padding: 10px;
     background-color: #e0f7fa;
     border-radius: 5px;
     font-weight: bold;
     color: #00796b;
     margin-top: 15px;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
 }
+
 
 /* Strong text styling */
 strong {
