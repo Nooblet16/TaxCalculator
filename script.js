@@ -11,6 +11,9 @@ function calculateTax() {
     const selfEmploymentIncome = parseFloat(document.getElementById("selfEmploymentIncome").value) || 0;
     const totalExpenses = parseFloat(document.getElementById("totalExpenses").value) || 0;
 
+    if (isNaN(payeIncome)) payeIncome = 0;
+    if (isNaN(selfEmploymentIncome)) selfEmploymentIncome = 0;
+    if (isNaN(totalExpenses)) totalExpenses = 0;
 
     // Calculate self-employment profits
     const selfEmploymentProfits = Math.max(0, selfEmploymentIncome - totalExpenses);
