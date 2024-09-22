@@ -1,19 +1,13 @@
 function calculateTax() {
-    let payeIncome = document.getElementById("payeIncome").value;
-    let selfEmploymentIncome = document.getElementById("selfEmploymentIncome").value;
-    let totalExpenses = document.getElementById("totalExpenses").value;
-
-    // Handle empty fields
-    payeIncome = payeIncome === "" ? 0 : parseFloat(payeIncome);
-    selfEmploymentIncome = selfEmploymentIncome === "" ? 0 : parseFloat(selfEmploymentIncome);
-    totalExpenses = totalExpenses === "" ? 0 : parseFloat(totalExpenses);
-    
+    const payeIncome = parseFloat(document.getElementById("payeIncome").value);
+    const selfEmploymentIncome = parseFloat(document.getElementById("selfEmploymentIncome").value);
+    const totalExpenses = parseFloat(document.getElementById("totalExpenses").value);
     const personalAllowance = 12570;
     const taxRate = 0.20;
     const class1NI = 0.12; // For PAYE Income
     const class2NI = 179.40; // For Self-Employment (fixed rate)
     const class4NI = 0.09; // For Self-Employment
-    
+
     // Calculate self-employment profits
     const selfEmploymentProfits = Math.max(0, selfEmploymentIncome - totalExpenses);
 
