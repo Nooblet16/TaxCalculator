@@ -7,14 +7,7 @@ function calculateTax() {
     const class1NI = 0.12; // For PAYE Income
     const class2NI = 179.40; // For Self-Employment (fixed rate)
     const class4NI = 0.09; // For Self-Employment
-    const payeIncome = parseFloat(document.getElementById("payeIncome").value) || 0;
-    const selfEmploymentIncome = parseFloat(document.getElementById("selfEmploymentIncome").value) || 0;
-    const totalExpenses = parseFloat(document.getElementById("totalExpenses").value) || 0;
-
-    if (isNaN(payeIncome)) payeIncome = 0;
-    if (isNaN(selfEmploymentIncome)) selfEmploymentIncome = 0;
-    if (isNaN(totalExpenses)) totalExpenses = 0;
-
+    
     // Calculate self-employment profits
     const selfEmploymentProfits = Math.max(0, selfEmploymentIncome - totalExpenses);
 
