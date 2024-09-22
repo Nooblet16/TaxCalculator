@@ -1,8 +1,9 @@
 function calculateTax() {
-    const payeIncome = parseFloat(document.getElementById("payeIncome").value);
-    const selfEmploymentIncome = parseFloat(document.getElementById("selfEmploymentIncome").value);
-    const totalExpenses = parseFloat(document.getElementById("totalExpenses").value);
-    // Add this after retrieving input values at the start of calculateTax
+    let payeIncome = document.getElementById("payeIncome").value;
+    let selfEmploymentIncome = document.getElementById("selfEmploymentIncome").value;
+    let totalExpenses = document.getElementById("totalExpenses").value;
+
+    // Handle empty fields
     payeIncome = payeIncome === "" ? 0 : parseFloat(payeIncome);
     selfEmploymentIncome = selfEmploymentIncome === "" ? 0 : parseFloat(selfEmploymentIncome);
     totalExpenses = totalExpenses === "" ? 0 : parseFloat(totalExpenses);
