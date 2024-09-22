@@ -1,7 +1,7 @@
 function calculateTax() {
-    const payeIncome = parseFloat(document.getElementById("payeIncome").value);
-    const selfEmploymentIncome = parseFloat(document.getElementById("selfEmploymentIncome").value);
-    const totalExpenses = parseFloat(document.getElementById("totalExpenses").value);
+    const payeIncome = parseFloat(document.getElementById("payeIncome").value) || 0;
+    const selfEmploymentIncome = parseFloat(document.getElementById("selfEmploymentIncome").value) || 0;
+    const totalExpenses = parseFloat(document.getElementById("totalExpenses").value) || 0;
     const personalAllowance = 12570;
     const taxRate = 0.20;
     const class1NI = 0.12; // For PAYE Income
