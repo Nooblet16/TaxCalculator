@@ -114,8 +114,6 @@ button:hover {
     font-weight: bold;
     color: #00796b;
     margin-top: 15px;
-    width: 100%; /* Make sure the box takes full width of the parent */
-    box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 
