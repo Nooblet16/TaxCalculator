@@ -107,7 +107,7 @@ button:hover {
 
 /* Styling for self-employment profit section */
 .self-employment-profit {
-    display: inline-block; /* Allows the box to resize based on content */
+    display: block; /* Allows the box to resize based on content */
     padding: 10px;
     background-color: #e0f7fa;
     border-radius: 5px;
